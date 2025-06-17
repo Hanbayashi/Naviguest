@@ -1,7 +1,13 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# react環境用のやつです。もうこれ以上ばぐんな(imasime)
+コミットするときの階層は 
+```
+C:\Users\81807\Desktop\4年\創造工学\React_next\react_sit
+```
+です。
+```
+cd C:\Users\81807\Desktop\4年\創造工学\React_next\react_sit
+```
+としてからコミットしてください
 ## Available Scripts
 
 In the project directory, you can run:
