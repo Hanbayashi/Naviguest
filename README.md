@@ -1,5 +1,4 @@
-# Getting Started with Create React App
-
+# react環境用のやつです。もうこれ以上ばぐんな(imasime)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
