@@ -1,4 +1,9 @@
 # react環境用のやつです。もうこれ以上ばぐんな(imasime)
+コミットするときの階層は 
+```
+C:\Users\81807\Desktop\4年\創造工学\React_next\react_sit
+```
+です。
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
