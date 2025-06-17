@@ -4,6 +4,10 @@
 C:\Users\81807\Desktop\4年\創造工学\React_next\react_sit
 ```
 です。
+```
+cd C:\Users\81807\Desktop\4年\創造工学\React_next\react_sit
+```
+としてからコミットしてください
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
