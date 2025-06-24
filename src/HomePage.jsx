@@ -8,9 +8,7 @@ const HomePage = () => {
         <h1 style={{ fontSize: '48px' }}>ナビゲスト</h1>
         <nav>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-            <li><a href="#" style={{ color: 'white', textDecoration: 'none' }}>リンク1</a></li>
-            <li><a href="#" style={{ color: 'white', textDecoration: 'none' }}>リンク2</a></li>
-            <li><a href="#" style={{ color: 'white', textDecoration: 'none' }}>リンク3</a></li>
+
           </ul>
         </nav>
       </header>
