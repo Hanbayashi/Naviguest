@@ -15,8 +15,14 @@ import Genre1iImage from './assets/genre1-9.png';
 
 import Genre2Image from './assets/genre2.png';
 import Genre2aImage from './assets/genre2-1.png';
+import Genre2bImage from './assets/genre2-2.png';
+import Genre2cImage from './assets/genre2-3.png';
+import Genre2dImage from './assets/genre2-4.png';
 
 import Genre3Image from './assets/genre3.png';
+import Genre3aImage from './assets/genre3-1.png';
+import Genre3bImage from './assets/genre3-2.png';
+import Genre3cImage from './assets/genre3-3.png';
 
 import Genre4Image from './assets/genre4.png';
 
@@ -24,6 +30,7 @@ const ChoosePage = () => {
   // スクロール先の参照を定義
   const genre1aRef = useRef(null);
   const genre2aRef = useRef(null);
+  const genre3aRef = useRef(null);
 
   // スクロール処理
   const handleScrollToGenre1a = () => {
@@ -31,6 +38,9 @@ const ChoosePage = () => {
   };
   const handleScrollToGenre2a = () => {
     genre2aRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScrollToGenre3a = () => {
+    genre3aRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -54,7 +64,7 @@ const ChoosePage = () => {
       </header>
 
       {/* 説明テキスト */}
-      <p style={{ padding: '2rem', fontSize: '20px' }}>ここが行先指定です。</p>
+      <p style={{ padding: '2rem', fontSize: '20px' }}>ジャンルを選択してください（文章は要件等）。</p>
 
       {/* ジャンル一覧 */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -72,6 +82,15 @@ const ChoosePage = () => {
           alt="ジャンル2"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
           onClick={handleScrollToGenre2a}
+        />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <img
+          src={Genre3Image}
+          alt="ジャンル3"
+          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
+          onClick={handleScrollToGenre3a}
         />
       </div>
 
@@ -96,7 +115,7 @@ const ChoosePage = () => {
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1bImage}
             alt="ジャンル1-2"
@@ -105,14 +124,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1cImage}
             alt="ジャンル1-3"
@@ -121,14 +140,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1dImage}
             alt="ジャンル1-4"
@@ -137,14 +156,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1eImage}
             alt="ジャンル1-5"
@@ -153,14 +172,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1fImage}
             alt="ジャンル1-6"
@@ -169,14 +188,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1gImage}
             alt="ジャンル1-7"
@@ -185,14 +204,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+        <Link to="/map"> 
           <img
             src={Genre1hImage}
             alt="ジャンル1-8"
@@ -201,14 +220,14 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+        <Link to="/map"> 
           <img
             src={Genre1iImage}
             alt="ジャンル1-9"
@@ -217,7 +236,7 @@ const ChoosePage = () => {
               height: 'auto',
               maxWidth: '100%',
               scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
+              cursor: 'pointer', 
             }}
           />
         </Link>
@@ -228,14 +247,103 @@ const ChoosePage = () => {
         <img
           ref={genre2aRef}
           src={Genre2aImage}
-          alt="ジャンル2.1"
+          alt="ジャンル2-1"
           style={{
             width: '300px',
             height: 'auto',
             maxWidth: '100%',
-            scrollMarginTop: '100px', // スクロール位置の余白調整（任意）
+            scrollMarginTop: '100px', 
           }}
         />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <img
+          src={Genre2bImage}
+          alt="ジャンル2-2"
+          style={{
+            width: '300px',
+            height: 'auto',
+            maxWidth: '100%',
+            scrollMarginTop: '100px', 
+          }}
+        />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <img
+          src={Genre2cImage}
+          alt="ジャンル2-3"
+          style={{
+            width: '300px',
+            height: 'auto',
+            maxWidth: '100%',
+            scrollMarginTop: '100px', 
+          }}
+        />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+        <img
+          src={Genre2dImage}
+          alt="ジャンル2-4"
+          style={{
+            width: '300px',
+            height: 'auto',
+            maxWidth: '100%',
+            scrollMarginTop: '100px', 
+          }}
+        />
+      </div>
+
+      {/*ジャンル3*/}
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            ref={genre3aRef} // スクロール対象としてのref
+            src={Genre3aImage}
+            alt="ジャンル3-1"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            src={Genre3bImage}
+            alt="ジャンル3-2"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            src={Genre3cImage}
+            alt="ジャンル3-3"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center' }}>
