@@ -26,6 +26,9 @@ import Genre3cImage from './assets/genre3-3.png';
 
 import Genre4Image from './assets/genre4.png';
 import Genre4aImage from './assets/genre4-1.png';
+import Genre4bImage from './assets/genre4-2.png';
+import Genre4cImage from './assets/genre4-3.png';
+import Genre4dImage from './assets/genre4-4.png';
 
 const ChoosePage = () => {
   // スクロール先の参照を定義
@@ -373,6 +376,54 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            src={Genre4bImage}
+            alt="ジャンル4-2"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            src={Genre4cImage}
+            alt="ジャンル4-3"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
+          <img
+            src={Genre4dImage}
+            alt="ジャンル4-4"
+            style={{
+              width: '300px',
+              height: 'auto',
+              maxWidth: '100%',
+              scrollMarginTop: '100px',
+              cursor: 'pointer', 
+            }}
+          />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center' }}>
