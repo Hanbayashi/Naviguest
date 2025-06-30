@@ -25,12 +25,14 @@ import Genre3bImage from './assets/genre3-2.png';
 import Genre3cImage from './assets/genre3-3.png';
 
 import Genre4Image from './assets/genre4.png';
+import Genre4aImage from './assets/genre4-1.png';
 
 const ChoosePage = () => {
   // スクロール先の参照を定義
   const genre1aRef = useRef(null);
   const genre2aRef = useRef(null);
   const genre3aRef = useRef(null);
+  const genre4aRef = useRef(null);
 
   // スクロール処理
   const handleScrollToGenre1a = () => {
@@ -41,6 +43,9 @@ const ChoosePage = () => {
   };
   const handleScrollToGenre3a = () => {
     genre3aRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScrollToGenre4a = () => {
+    genre4aRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -91,6 +96,15 @@ const ChoosePage = () => {
           alt="ジャンル3"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
           onClick={handleScrollToGenre3a}
+        />
+      </div>
+
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+        <img
+          src={Genre4Image}
+          alt="ジャンル4"
+          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
+          onClick={handleScrollToGenre4a} // ここでスクロール処理を実行
         />
       </div>
 
@@ -344,6 +358,21 @@ const ChoosePage = () => {
             }}
           />
         </Link>
+      </div>
+
+      {/*ジャンル4*/}
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <img
+          ref={genre4aRef}
+          src={Genre4aImage}
+          alt="ジャンル4-1"
+          style={{
+            width: '300px',
+            height: 'auto',
+            maxWidth: '100%',
+            scrollMarginTop: '100px', 
+          }}
+        />
       </div>
 
       <div style={{ textAlign: 'center' }}>
