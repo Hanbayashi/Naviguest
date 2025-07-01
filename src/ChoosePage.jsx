@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // 戻るボタン用
 import backbutton from './assets/BackButton.png';
 
@@ -61,7 +61,7 @@ import Genre8Image from './assets/genre8.png';
 import Genre8aImage from './assets/genre8-1.png';
 import Genre8bImage from './assets/genre8-2.png';
 
-const ChoosePage = () => {
+const SelectionScreen = () => {
   // スクロール先の参照を定義
   const genre1aRef = useRef(null);
   const genre2aRef = useRef(null);
@@ -71,6 +71,8 @@ const ChoosePage = () => {
   const genre6aRef = useRef(null);
   const genre7aRef = useRef(null);
   const genre8aRef = useRef(null);
+
+  const [pythonMessage, setPythonMessage] = useState('Pythonからのメッセージを待機中...');
 
   // スクロール処理
   const handleScrollToGenre1a = () => {
@@ -98,6 +100,27 @@ const ChoosePage = () => {
     genre8aRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // ④ PythonバックエンドへのAPI呼び出しロジックを追加
+  // 追加場所: スクロール処理関数の定義の直後、またはコンポーネントの先頭
+  useEffect(() => {
+    const apiUrl = 'http://localhost:5000/api/hello'; // PythonサーバーのURL
+
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        setPythonMessage(data.message);
+      })
+      .catch(error => {
+        console.error("Python API呼び出しエラー:", error);
+        setPythonMessage('Pythonバックエンドに接続できませんでした。');
+      });
+  }, []); // コンポーネントがマウントされたときに一度だけ実行
+
   return (
     <>
       {/* ヘッダー */}
@@ -120,6 +143,10 @@ const ChoosePage = () => {
 
       {/* 説明テキスト */}
       <p style={{ padding: '2rem', fontSize: '20px' }}>ジャンルを選択してください（文章は要件等）。</p>
+
+      <p style={{ textAlign: 'center', fontSize: '1.2em', color: '#555' }}>
+        {pythonMessage}
+      </p>
 
       {/* ジャンル一覧 */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -344,6 +371,7 @@ const ChoosePage = () => {
 
       {/*ジャンル2*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map"> 
         <img
           ref={genre2aRef}
           src={Genre2aImage}
@@ -355,9 +383,11 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           src={Genre2bImage}
           alt="ジャンル2-2"
@@ -368,9 +398,11 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           src={Genre2cImage}
           alt="ジャンル2-3"
@@ -381,9 +413,11 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+        <Link to="/map">
         <img
           src={Genre2dImage}
           alt="ジャンル2-4"
@@ -394,6 +428,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       {/*ジャンル3*/}
@@ -448,6 +483,7 @@ const ChoosePage = () => {
 
       {/*ジャンル4*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           ref={genre4aRef}
           src={Genre4aImage}
@@ -459,6 +495,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -511,6 +548,7 @@ const ChoosePage = () => {
 
       {/*ジャンル5*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           ref={genre5aRef}
           src={Genre5aImage}
@@ -522,6 +560,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -590,6 +629,7 @@ const ChoosePage = () => {
 
       {/*ジャンル6*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           ref={genre6aRef}
           src={Genre6aImage}
@@ -601,6 +641,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -749,6 +790,7 @@ const ChoosePage = () => {
 
       {/*ジャンル7*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           ref={genre7aRef}
           src={Genre7aImage}
@@ -760,6 +802,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -844,6 +887,7 @@ const ChoosePage = () => {
 
       {/*ジャンル8*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <Link to="/map">
         <img
           ref={genre8aRef}
           src={Genre8aImage}
@@ -855,6 +899,7 @@ const ChoosePage = () => {
             scrollMarginTop: '100px', 
           }}
         />
+        </Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
@@ -889,4 +934,4 @@ const ChoosePage = () => {
   );
 };
 
-export default ChoosePage;
+export default SelectionScreen;
