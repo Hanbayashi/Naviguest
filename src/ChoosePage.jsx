@@ -30,47 +30,12 @@ import Genre4bImage from './assets/genre4-2.png';
 import Genre4cImage from './assets/genre4-3.png';
 import Genre4dImage from './assets/genre4-4.png';
 
-import Genre5Image from './assets/genre5.png';
-import Genre5aImage from './assets/genre5-1.png';
-import Genre5bImage from './assets/genre5-2.png';
-import Genre5cImage from './assets/genre5-3.png';
-import Genre5dImage from './assets/genre5-4.png';
-import Genre5eImage from './assets/genre5-5.png';
-
-import Genre6Image from './assets/genre6.png';
-import Genre6aImage from './assets/genre6-1.png';
-import Genre6bImage from './assets/genre6-2.png';
-import Genre6cImage from './assets/genre6-3.png';
-import Genre6dImage from './assets/genre6-4.png';
-import Genre6eImage from './assets/genre6-5.png';
-import Genre6fImage from './assets/genre6-6.png';
-import Genre6gImage from './assets/genre6-7.png';
-import Genre6hImage from './assets/genre6-8.png';
-import Genre6iImage from './assets/genre6-9.png';
-import Genre6jImage from './assets/genre6-10.png';
-
-import Genre7Image from './assets/genre7.png';
-import Genre7aImage from './assets/genre7-1.png';
-import Genre7bImage from './assets/genre7-2.png';
-import Genre7cImage from './assets/genre7-3.png';
-import Genre7dImage from './assets/genre7-4.png';
-import Genre7eImage from './assets/genre7-5.png';
-import Genre7fImage from './assets/genre7-6.png';
-
-import Genre8Image from './assets/genre8.png';
-import Genre8aImage from './assets/genre8-1.png';
-import Genre8bImage from './assets/genre8-2.png';
-
 const ChoosePage = () => {
   // スクロール先の参照を定義
   const genre1aRef = useRef(null);
   const genre2aRef = useRef(null);
   const genre3aRef = useRef(null);
   const genre4aRef = useRef(null);
-  const genre5aRef = useRef(null);
-  const genre6aRef = useRef(null);
-  const genre7aRef = useRef(null);
-  const genre8aRef = useRef(null);
 
   // スクロール処理
   const handleScrollToGenre1a = () => {
@@ -84,18 +49,6 @@ const ChoosePage = () => {
   };
   const handleScrollToGenre4a = () => {
     genre4aRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const handleScrollToGenre5a = () => {
-    genre5aRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const handleScrollToGenre6a = () => {
-    genre6aRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const handleScrollToGenre7a = () => {
-    genre7aRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const handleScrollToGenre8a = () => {
-    genre8aRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -149,48 +102,12 @@ const ChoosePage = () => {
         />
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
         <img
           src={Genre4Image}
           alt="ジャンル4"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre4a} 
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          src={Genre5Image}
-          alt="ジャンル5"
-          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre5a} 
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          src={Genre6Image}
-          alt="ジャンル6"
-          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre6a} 
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          src={Genre7Image}
-          alt="ジャンル7"
-          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre7a} 
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          src={Genre8Image}
-          alt="ジャンル8"
-          style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre8a} 
+          onClick={handleScrollToGenre4a} // ここでスクロール処理を実行
         />
       </div>
 
@@ -430,7 +347,7 @@ const ChoosePage = () => {
         </Link>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <Link to="/map"> 
           <img
             src={Genre3cImage}
@@ -493,375 +410,11 @@ const ChoosePage = () => {
         </Link>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <Link to="/map"> 
           <img
             src={Genre4dImage}
             alt="ジャンル4-4"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      {/*ジャンル5*/}
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          ref={genre5aRef}
-          src={Genre5aImage}
-          alt="ジャンル5-1"
-          style={{
-            width: '300px',
-            height: 'auto',
-            maxWidth: '100%',
-            scrollMarginTop: '100px', 
-          }}
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre5bImage}
-            alt="ジャンル5-2"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre5cImage}
-            alt="ジャンル5-3"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre5dImage}
-            alt="ジャンル5-4"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre5eImage}
-            alt="ジャンル5-5"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      {/*ジャンル6*/}
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          ref={genre6aRef}
-          src={Genre6aImage}
-          alt="ジャンル6-1"
-          style={{
-            width: '300px',
-            height: 'auto',
-            maxWidth: '100%',
-            scrollMarginTop: '100px', 
-          }}
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6bImage}
-            alt="ジャンル6-2"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6cImage}
-            alt="ジャンル6-3"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6dImage}
-            alt="ジャンル6-4"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6eImage}
-            alt="ジャンル6-5"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6fImage}
-            alt="ジャンル6-6"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6gImage}
-            alt="ジャンル6-7"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6hImage}
-            alt="ジャンル6-8"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6iImage}
-            alt="ジャンル6-9"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre6jImage}
-            alt="ジャンル6-10"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      {/*ジャンル7*/}
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          ref={genre7aRef}
-          src={Genre7aImage}
-          alt="ジャンル7-1"
-          style={{
-            width: '300px',
-            height: 'auto',
-            maxWidth: '100%',
-            scrollMarginTop: '100px', 
-          }}
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre7bImage}
-            alt="ジャンル7-2"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre7cImage}
-            alt="ジャンル7-3"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre7dImage}
-            alt="ジャンル7-4"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre7eImage}
-            alt="ジャンル7-5"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre7fImage}
-            alt="ジャンル7-6"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', 
-            }}
-          />
-        </Link>
-      </div>
-
-      {/*ジャンル8*/}
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <img
-          ref={genre8aRef}
-          src={Genre8aImage}
-          alt="ジャンル8-1"
-          style={{
-            width: '300px',
-            height: 'auto',
-            maxWidth: '100%',
-            scrollMarginTop: '100px', 
-          }}
-        />
-      </div>
-
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-        <Link to="/map"> 
-          <img
-            src={Genre8bImage}
-            alt="ジャンル8-2"
             style={{
               width: '300px',
               height: 'auto',
