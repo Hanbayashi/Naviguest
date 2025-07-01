@@ -176,12 +176,12 @@ const SelectionScreen = () => {
         />
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
         <img
           src={Genre4Image}
           alt="ジャンル4"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre4a} 
+          onClick={handleScrollToGenre4a} // ここでスクロール処理を実行
         />
       </div>
 
@@ -190,7 +190,7 @@ const SelectionScreen = () => {
           src={Genre5Image}
           alt="ジャンル5"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre5a} 
+          onClick={handleScrollToGenre5a} // ここでスクロール処理を実行
         />
       </div>
 
@@ -199,7 +199,7 @@ const SelectionScreen = () => {
           src={Genre6Image}
           alt="ジャンル6"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre6a} 
+          onClick={handleScrollToGenre6a}
         />
       </div>
 
@@ -208,16 +208,16 @@ const SelectionScreen = () => {
           src={Genre7Image}
           alt="ジャンル7"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre7a} 
+          onClick={handleScrollToGenre7a}
         />
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
         <img
           src={Genre8Image}
           alt="ジャンル8"
           style={{ width: '300px', height: 'auto', maxWidth: '100%', cursor: 'pointer' }}
-          onClick={handleScrollToGenre8a} 
+          onClick={handleScrollToGenre8a} // ここでスクロール処理を実行
         />
       </div>
 
@@ -465,7 +465,7 @@ const SelectionScreen = () => {
         </Link>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <Link to="/map"> 
           <img
             src={Genre3cImage}
@@ -530,7 +530,7 @@ const SelectionScreen = () => {
         </Link>
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <Link to="/map"> 
           <img
             src={Genre4dImage}

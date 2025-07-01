@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // ナビゲーション用にLinkをインポート
 import CityHall from './assets/CityHall.jpg';
-import startbutton from './assets/StartButton.png';
 
 const HomePage = () => {
   return (
     <>
-      <header style={{ backgroundColor: '#0066cc', color: 'white', padding: '0.5rem 2rem', textAlign: 'center' }}>
+      <header style={{ backgroundColor: '#0066cc', color: 'white', padding: '1rem 2rem', textAlign: 'center' }}>
         <h1 style={{ fontSize: '48px' }}>ナビゲスト</h1>
         <nav>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', justifyContent: 'center', gap: '2rem' }}>
@@ -47,7 +46,6 @@ const HomePage = () => {
         </Link>
       </div>
 
-      
       <footer style={{ backgroundColor: '#ddd', textAlign: 'center', padding: '1rem' }}>
         <p>&copy; 2025 ナビゲスト</p>
       </footer>
