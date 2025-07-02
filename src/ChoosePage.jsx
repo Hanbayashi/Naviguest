@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // 戻るボタン用
-import backbutton from './assets/BackButton.png';
+import { Link, useNavigate } from 'react-router-dom';
 
+// 画像のインポート
+import backbutton from './assets/BackButton.png';
 import Genre1Image from './assets/genre1.png';
 import Genre1aImage from './assets/genre1-1.png';
 import Genre1bImage from './assets/genre1-2.png';
@@ -62,6 +63,9 @@ import Genre8aImage from './assets/genre8-1.png';
 import Genre8bImage from './assets/genre8-2.png';
 
 const SelectionScreen = () => {
+
+  const navigate = useNavigate();
+
   // スクロール先の参照を定義
   const genre1aRef = useRef(null);
   const genre2aRef = useRef(null);
@@ -103,23 +107,47 @@ const SelectionScreen = () => {
   // ④ PythonバックエンドへのAPI呼び出しロジックを追加
   // 追加場所: スクロール処理関数の定義の直後、またはコンポーネントの先頭
   useEffect(() => {
-    const apiUrl = 'http://localhost:5000/api/hello'; // PythonサーバーのURL
-
+    const apiUrl = '/api/hello'; // Vercelにデプロイ後の相対パス
     fetch(apiUrl)
       .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
       })
-      .then(data => {
-        setPythonMessage(data.message);
-      })
+      .then(data => setPythonMessage(data.message))
       .catch(error => {
         console.error("Python API呼び出しエラー:", error);
         setPythonMessage('Pythonバックエンドに接続できませんでした。');
       });
-  }, []); // コンポーネントがマウントされたときに一度だけ実行
+  }, []);
+
+  const handleGenre1aClick = async () => {
+    const valueToSend = 1; // 送信する数値は「1」
+
+    try {
+      const response = await fetch('/api/update_number', { // PythonのAPIエンドポイント
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ number: valueToSend }), // 数値1をJSONとして送信
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log("Pythonからのレスポンス:", data);
+      // Python側で状態が保持されないため、ここではアラートのみ。
+      // 実際にはDBに保存してその結果を表示するべきです。
+      alert(`Pythonに数値 ${valueToSend} を送信しました。\nAPIの計算結果: ${data.calculated_value}`);
+
+      // 成功したらMap.jsxに遷移
+      navigate('/map'); // Map.jsxへのパス
+
+    } catch (error) {
+      console.error("数値送信エラー:", error);
+      alert("数値の送信に失敗しました。詳細をコンソールで確認してください。");
+    }
+  };
 
   return (
     <>
@@ -225,20 +253,20 @@ const SelectionScreen = () => {
 
       {/*ジャンル1*/}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <Link to="/map"> {/* /map パスへ遷移 */}
-          <img
-            ref={genre1aRef} // スクロール対象としてのrefは残す
-            src={Genre1aImage}
-            alt="ジャンル1-1"
-            style={{
-              width: '300px',
-              height: 'auto',
-              maxWidth: '100%',
-              scrollMarginTop: '100px',
-              cursor: 'pointer', // クリック可能であることを示す
-            }}
-          />
-        </Link>
+        {/* Link コンポーネントを削除し、onClick で直接処理を呼び出す */}
+        <img
+          ref={genre1aRef}
+          src={Genre1aImage}
+          alt="ジャンル1-1"
+          style={{
+            width: '300px',
+            height: 'auto',
+            maxWidth: '100%',
+            scrollMarginTop: '100px',
+            cursor: 'pointer',
+          }}
+          onClick={handleGenre1aClick}
+        />
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
