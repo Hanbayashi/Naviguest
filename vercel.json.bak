@@ -20,7 +20,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/react_site/build/$1"
+      "destination": "/react_site/build/index.html" 
     }
   ],
   "headers": [
