@@ -20,7 +20,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/react_site/build/index.html"
+      "destination": "/react_site/build/index.html" 
     }
   ],
   "headers": [
